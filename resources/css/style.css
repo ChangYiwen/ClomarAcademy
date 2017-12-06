@@ -2,23 +2,57 @@
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
 }
 
 h1 {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 p {
   font-size: 1.125rem;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+}
+
+img, video {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container_left {
+  width: 60%;
+  color: hsl(31, 11%, 30%);
+  margin: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.container_right {
+  width: 40%;
+  color: hsl(31, 11%, 30%);
+  margin: 2rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* banner */
@@ -47,11 +81,12 @@ p {
 
 .colmar {
   font-weight: bold;
+  color: hsl(0, 0%, 0%);
 }
 
 .academy {
   font-weight: light;
-  color: hsl(22, 1%, 57%);
+  color: hsl(31, 11%, 57%);
 }
 
 nav {
@@ -65,104 +100,63 @@ nav li {
 }
 
 /* header */
-header {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
+header.container {
   align-items: center;
-  background-color: hsl(22, 1%, 79%);
+  background-color: hsl(31, 11%, 79%);
 }
 
-.header_left {
-  width: 60%;
-  margin: 2rem 1.5rem 2rem 1.5rem;
-}
-
-.header_left img {
-  width: 100%;
-  height: auto;
-}
-
-.header_right {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
+  /* header right */
+header .container_right {
   justify-content: center;
-  align-items: flex-start;
 }
 
-.header_right h1 {
-  font-weight: bold;
-  color: hsl(22, 1%, 30%);
+header .container_right h1 {
   padding-bottom: 2.5rem;
+  display: inline-block;
+  width: 80%;
 }
 
-.header_right h4 {
+header .container_right h4 {
   font-weight: normal;
-  color: hsl(22, 1%, 30%);
+  line-height: 1.5;
   padding-bottom: 2.5rem;
+  display: inline-block;
+  width: 80%;
 }
 
 .start_button {
-  width: 100%;
-  background-color: hsl(22, 1%, 30%);
+  width: 80%;
+  background-color: hsl(31, 11%, 30%);
   text-align: center;
 }
 
 .start_button a {
   font-size: 1.5rem;
   font-weight: normal;
-  color: hsl(0, 100%, 100%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
   display: block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 /* information */
-.information {
-  width: 100%;
-  color: hsl(22, 1%, 30%);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /*information left*/
+.information .container_left h2 {
+  padding: 2rem 0 1.5rem;
 }
 
-.information_left {
-  width: 60%;
-  margin: 2rem 1.5rem 2rem 1.5rem;
-}
-
-.information_left img {
-  width: 100%;
-  height: auto;
-}
-
-.information_left h2 {
-  font-weight: bold;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.information_left p {
+.information .container_left p {
   padding-bottom: 2rem;
 }
-
-.information_right {
-  width: 40%;
-  margin: 2rem 1.5rem 2rem 1.5rem;
-  border-left: 1px dotted hsl(22, 1%, 79%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /* information right*/
+.information .container_right {
+  border-left: 1px dotted hsl(31, 11%, 79%);
 }
 
 .information_item {
   width: 100%;
-  border-bottom: 2px solid hsl(22, 1%, 79%);
+  border-bottom: 2px solid hsl(31, 11%, 79%);
   display:flex;
-  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -171,8 +165,6 @@ header {
 }
 
 .information_img img {
-  width: 100%;
-  height: auto;
   padding: 1rem;
 }
 
@@ -182,15 +174,14 @@ header {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  color: hsl(22, 1%, 30%);
+  color: hsl(31, 11%, 30%);
 }
 
 .guest {
-  background-color: hsl(22, 1%, 79%);
+  background-color: hsl(31, 11%, 79%);
 }
 
 .information_content h4 {
-  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
@@ -199,122 +190,75 @@ header {
 }
 
 .information a {
-  text-decoration: none;
   font-size: 1.125rem;
   color: hsl(207, 74%, 43%);
 }
 
 /* courses */
 .courses {
-  width: 100%;
-  background-color: hsl(22, 1%, 79%);
-  display: flex;
+  background-color: hsl(31, 11%, 79%);
+  align-items: center;
   flex-direction: column;
 }
 
 .courses h2 {
-  font-weight: bold;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  color: hsl(22, 1%, 30%);
+  padding: 2rem 0;
+  color: hsl(31, 11%, 30%);
 }
 
 .row {
-  margin-left: 3.5rem;
-  margin-right: 3.5rem;
-  margin-bottom: 2rem;
+  margin: 0 3.5rem 2rem 3.5rem;
   display: flex;
 }
 
 .course_category {
   width: 32%;
   background-color: white;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
   padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-.course_category img {
-  width: 100%;
-  height: auto;
 }
 
 .course_category h4 {
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  color: hsl(22, 1%, 30%);
+  margin: 1rem;
+  color: hsl(31, 11%, 30%);
 }
 
 .course_category p {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  color: hsl(22, 1%, 55%);
+  margin: 0.5rem 1rem;
+  color: hsl(31, 11%, 50%);
 }
 
 /* thesis */
-
 .thesis {
   width: 100%;
-  border-bottom: 2px solid hsl(22, 1%, 79%);
+  border-bottom: 2px solid hsl(31, 11%, 79%);
 }
 
 .thesis h2 {
-  font-weight: bold;
   text-align: center;
-  color: hsl(22, 1%, 30%);
-  margin-top: 2rem;
+  color: hsl(31, 11%, 30%);
+  margin: 2rem 0;
+}
+
+  /* thesis left */
+.thesis_content .container_left h4 {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.thesis_content .container_left p {
   margin-bottom: 2rem;
 }
-
-.thesis_content {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-
-.thesis_left {
-  width: 60%;
-  margin-left: 1.5rem;
-  color: hsl(22, 1%, 30%);
-}
-
-.thesis_left video {
-  width: 100%;
-  height: auto;
-}
-
-.thesis_left h4 {
-  font-weight: bold;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.thesis_left p {
-  margin-bottom: 2rem;
-}
-
-.thesis_right {
-  width: 40%;
-  margin-left: 1.5rem;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
+  /* thesis right */
 .thesis_item {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
 }
 
 .fisma {
-  background-color: hsl(22, 1%, 79%);
+  background-color: hsl(31, 11%, 79%);
 }
 
 .thesis_img {
@@ -323,14 +267,8 @@ header {
   margin: 1rem;
 }
 
-.thesis_img img {
-  width: 100%;
-  height: auto;
-}
-
 .thesis_item_content {
   width: 65%;
-  color: hsl(22, 1%, 30%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,7 +276,6 @@ header {
 }
 
 .thesis_item_content h4 {
-  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
@@ -350,19 +287,18 @@ header {
 footer {
   width: 100%;
   height: 5rem;
-  color: hsl(22, 1%, 30%);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 footer p {
-  margin-top: 1rem;
-  margin-left: 1.5rem;
+  margin: 1rem 0 0 1.5rem;
+  font-weight: normal;
+  color: hsl(0, 0%, 0%);
 }
 
 footer ul li {
   display: inline-block;
-  margin-right: 1.5rem;
-  margin-top: 1rem;
+  margin: 1rem 1.5rem 0;
 }
