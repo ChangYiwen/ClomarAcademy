@@ -63,9 +63,12 @@ img, video {
 .banner {
   height: 4rem;
   width: 100%;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 10;
 }
 
 .banner .logo {
@@ -103,6 +106,11 @@ nav li {
   margin-left: 1rem;
 }
 
+nav li:last-child {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 nav li a {
   color: hsl(0, 0%, 0%);
 }
@@ -111,6 +119,8 @@ nav li a {
 header.container {
   align-items: center;
   background-color: hsl(31, 11%, 79%);
+  position: relative;
+  top: 4rem;
 }
 
 header .container_right {
@@ -131,23 +141,29 @@ header .container_right h4 {
   width: 80%;
 }
 
-.start_button {
+a.start_button {
+  display: inline-block;
   width: 80%;
   background-color: hsl(31, 11%, 50%);
   border-radius: 5px;
   text-align: center;
-}
-
-.start_button a {
+  box-shadow: 0 3px 15px hsla(0, 0%, 0%, .3);
   font-size: 1.5rem;
   font-weight: normal;
   color: hsl(0, 0%, 100%);
-  text-decoration: none;
-  display: block;
   padding: 0.5rem 0;
 }
 
+a.start_button:active {
+  box-shadow: 0 0px 0px hsla(0, 0%, 0%, .5);
+}
+
 /* information */
+.information {
+  position: relative;
+  top: 4rem;
+}
+
 .information .container_left h2 {
   padding: 2rem 0 1.5rem;
 }
@@ -184,7 +200,7 @@ header .container_right h4 {
   color: hsl(31, 11%, 20%);
 }
 
-.guest {
+.information .information_item:last-child {
   background-color: hsl(31, 11%, 79%);
 }
 
@@ -206,12 +222,14 @@ header .container_right h4 {
   background-color: hsl(31, 11%, 79%);
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 4rem;
 }
 
 .courses h2 {
   text-align: center;
   padding: 2rem 0;
-  color: hsl(31, 11%, 20%);
+  color: hsl(31, 11%, 15%);
 }
 
 .row {
@@ -222,6 +240,8 @@ header .container_right h4 {
 .course_category {
   width: 32%;
   background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 20px hsla(0, 0%, 0%, .4);
+  border-radius: 15px;
   margin: 0 1rem;
   padding-bottom: 1.5rem;
   display: flex;
@@ -241,12 +261,14 @@ header .container_right h4 {
 .thesis {
   width: 100%;
   border-bottom: 2px solid hsl(31, 11%, 79%);
+  position: relative;
+  top: 4rem;
 }
 
 .thesis h2 {
   text-align: center;
   color: hsl(31, 11%, 30%);
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .thesis_content .container_left h4 {
@@ -262,7 +284,7 @@ header .container_right h4 {
   display: flex;
 }
 
-.fisma {
+.thesis .thesis_item:first-child {
   background-color: hsl(31, 11%, 79%);
 }
 
@@ -290,11 +312,12 @@ header .container_right h4 {
 
 /* footer */
 footer {
-  width: 100%;
   height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+  top: 4rem;
 }
 
 footer p {
@@ -383,13 +406,9 @@ footer ul li a {
     width:  95%;
   }
 
-  .start_button {
+  a.start_button {
     width: 95%;
     margin: 0 1rem 2rem 1rem;
-  }
-
-  .start_button a {
-    padding: 0.5rem 0;
   }
   /* information */
   .information .container_left {
@@ -423,7 +442,7 @@ footer ul li a {
     margin: 0 2rem 2rem 2rem;
   }
 
-  .guest {
+  .information .information_item:last-child {
     background-color: hsl(0, 0%, 100%);
   }
 
@@ -453,6 +472,7 @@ footer ul li a {
     width: 100%;
     margin: 0.25rem 1rem;
     padding-bottom: 0;
+    border-style: none;
   }
 
   .course_category h4 {
