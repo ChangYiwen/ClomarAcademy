@@ -10,8 +10,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.5rem;  font-weight: bold;
 }
 
 h4 {
@@ -157,7 +156,6 @@ a.start_button {
 a.start_button:active {
   box-shadow: 0 0px 0px hsla(0, 0%, 0%, .5);
 }
-
 /* information */
 .information {
   position: relative;
@@ -185,9 +183,6 @@ a.start_button:active {
 
 .information_img {
   width: 35%;
-}
-
-.information_img img {
   padding: 1rem;
 }
 
@@ -216,7 +211,6 @@ a.start_button:active {
   font-size: 1.125rem;
   color: hsl(207, 74%, 43%);
 }
-
 /* courses */
 .courses {
   background-color: hsl(31, 11%, 79%);
@@ -256,7 +250,6 @@ a.start_button:active {
   margin: 0.5rem 1rem;
   color: hsl(31, 11%, 20%);
 }
-
 /* thesis */
 .thesis {
   width: 100%;
@@ -282,15 +275,15 @@ a.start_button:active {
 .thesis_item {
   width: 100%;
   display: flex;
+  align-items: flex-start;
 }
 
 .thesis .thesis_item:first-child {
   background-color: hsl(31, 11%, 79%);
 }
 
-.thesis_img {
+img.thesis_img {
   width: 35%;
-  height: auto;
   margin: 1rem;
 }
 
@@ -309,7 +302,6 @@ a.start_button:active {
 .thesis_item_content p {
   margin-bottom: 0.5rem;
 }
-
 /* footer */
 footer {
   height: 5rem;
@@ -334,7 +326,7 @@ footer ul li {
 footer ul li a {
   color: hsl(0, 0%, 0%);
 }
-
+/* display for mobile devices */
 @media only screen and (max-width: 768px) {
   /* universal */
   h1 {
@@ -372,7 +364,6 @@ footer ul li a {
     .mobile_only {
       display: inline;
     }
-
   /* banner */
   .banner {
     justify-content: space-around;
@@ -394,7 +385,6 @@ footer ul li a {
   nav {
     display: none;
   }
-
   /* header */
   header .container_right h1 {
     padding: 2rem 0 2rem 1rem;
@@ -429,10 +419,6 @@ footer ul li a {
     width: 95%;
     padding: 0;
     margin: 1rem;
-  }
-
-  .information_img img {
-    padding: 0;
   }
 
   .information_content {
@@ -472,7 +458,7 @@ footer ul li a {
     width: 100%;
     margin: 0.25rem 1rem;
     padding-bottom: 0;
-    border-style: none;
+    box-shadow: none;
   }
 
   .course_category h4 {
@@ -480,7 +466,6 @@ footer ul li a {
     margin: 0;
     padding: 1rem 0 1.5rem 1rem;
     background-color: hsl(31, 11%, 79%);
-    /*border-radius: 5px;*/
   }
 
   .course_category p, .course_category img {
